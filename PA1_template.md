@@ -105,6 +105,7 @@ Total missing values are 2304
 
 Create a new dataset that is equal to the original dataset but with the missing data filled in.
 
+**Strategy:** We shall simply use the mean of respective intervals to fill in for the NA values of the steps.
 
 ```r
 impute.mean <- function(x) replace(x, is.na(x), mean(x, na.rm = TRUE))
